@@ -4,16 +4,12 @@ let amigos = [];
 //Capturar el valor del campo de entrada//
 function agregarAmigo(){
     let amigo = document.getElementById('amigo').value;
-    console.log (amigo)
-    
     if (amigo == '') {
        //Validar entrada: Alert con un mensaje de error: "Por favor, inserte un nombre."//
        alert("Por favor, inserte un nombre.");
-         
     } else {
         //Actualizar el array de amigos//
         amigos.push (amigo);
-        console.log (amigos);
         //Limpiar el campo de entrada: Después de añadir el nombre//
         limpiarCampo();
         mostrarLista()
@@ -49,11 +45,3 @@ function sortearAmigo(){
     }
 }
 
-/*function sortearAmigo(){
-    //Valida amigos disponibles, genera numero indice aleatorio y luego obtiene el nombre sorteado//
-    if (amigos.length =! 0) {
-        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
-        let nombreSorteado = document.getElementById('resultado');
-        nombreSorteado.innerHTML = amigos[indiceAleatorio];
-    }
-}*/
